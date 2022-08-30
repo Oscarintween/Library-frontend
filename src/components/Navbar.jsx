@@ -17,9 +17,8 @@ import '../index.css'
 const drawerWidth = 240;
 const navItems = [
     {"name":"HOME","linkName":""},
-    {"name":"AGREGAR MASCOTA","linkName":"addPet"},
-    {"name":"ABOUT","linkName":"about"},
-
+    {"name":"ADD BOOK","linkName":"addBook"},
+    {"name":"UPDATE BOOK", "linkName":"updateBook"},    
     ];
 
 function Navbar(props) {
@@ -33,7 +32,7 @@ function Navbar(props) {
   const drawer = (
     <Box className='hamburger' onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        Vet
+        Library of Alexandria
       </Typography>
       <Divider />
       <List>
@@ -51,9 +50,9 @@ function Navbar(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box  sx={{ display: 'flex'}}>
       <AppBar component="nav">
-        <Toolbar>
+        <Toolbar className='hamburger'>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -68,7 +67,7 @@ function Navbar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            Veterinaria
+            Library of Alexandria
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
