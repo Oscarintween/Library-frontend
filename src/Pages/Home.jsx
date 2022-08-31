@@ -15,11 +15,8 @@ function Home() {
     return response
 }
 
-//   const deletePet = (id)=>{
-//     axios.delete(url, )
-//   }
   const handleClick = ()=>{
-    const datos = getBooks()
+    getBooks()
     .then( setBooks)
     .then(()=>console.log(books))
   }
